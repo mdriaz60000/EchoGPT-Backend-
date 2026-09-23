@@ -1,0 +1,66 @@
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "moduleResolution": "bundler",
+//     "resolvePackageJsonExports": true,
+//     "esModuleInterop": true,
+//     "isolatedModules": true,
+//     "declaration": true,
+//     "removeComments": true,
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "allowSyntheticDefaultImports": true,
+//     "target": "ES2023",
+//     "types": ["node", "jest"],
+//     "sourceMap": true,
+//     "outDir": "./dist",
+//     "rootDir": ".",
+//     "incremental": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "strictPropertyInitialization": false,
+//     "ignoreDeprecations": "6.0"
+//   },
+  
+//   "extends": "./tsconfig.json",
+//   "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+// }
+
+
+//prisma setup
+  // "compilerOptions": {
+  //   "module": "ESNext",
+  //   "moduleResolution": "bundler",
+  //   "target": "ES2023",
+  //   "strict": true,
+  //   "esModuleInterop": true,
+  //   "ignoreDeprecations": "6.0"
+  // }
+
+
+  {
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node10",
+    "target": "ES2023",
+
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": true,
+
+    "outDir": "./dist",
+    "rootDir": ".",
+
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+
+    "types": ["node", "jest"]
+  }
+}
