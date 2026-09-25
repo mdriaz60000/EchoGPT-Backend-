@@ -1,0 +1,17 @@
+model AiProvider {
+  id          String       @id @default(uuid())
+  name        String
+  type        ProviderType
+
+  apiKey      String
+
+  isEnabled   Boolean      @default(true)
+  isDefault   Boolean      @default(false)
+
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@unique([type])
+  @@index([isEnabled])
+  @@index([isDefault])
+}

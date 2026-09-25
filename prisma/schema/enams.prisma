@@ -13,3 +13,9 @@ enum SubscriptionStatus {
   INACTIVE
   CANCELLED
 }
+
+enum ProviderType {
+  OPENAI
+  ANTHROPIC
+  GEMINI
+}
