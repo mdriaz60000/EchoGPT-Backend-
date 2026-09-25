@@ -51,6 +51,7 @@ import {
 import { UsersService } from "./users.service";
 import { JwtAuthGuard } from "../auth/guards/jwtAuthGuards";
 import { UpdateProfileDto } from "./dto/updateProfile.dto";
+import { ChangePasswordDto } from "./dto/changePassword.dto";
 
 
 @Controller("users")
@@ -70,6 +71,20 @@ export class UsersController {
     @Body() data: UpdateProfileDto,
   ) {
     return this.usersService.updateProfile(id, data);
+  }
+
+
+    @UseGuards(JwtAuthGuard)
+  @Patch(":id/password")
+  changePassword(
+    @Param("id") id: string,
+    @Body() data: ChangePasswordDto,
+  ) {
+    return this.usersService.changePassword(
+      id,
+      data.currentPassword,
+      data.newPassword,
+    );
   }
 
   @UseGuards(JwtAuthGuard)

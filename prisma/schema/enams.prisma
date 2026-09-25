@@ -2,3 +2,14 @@ enum Role {
   USER
   ADMIN
 }
+
+enum SubscriptionPlan {
+  FREE
+  PREMIUM
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  INACTIVE
+  CANCELLED
+}
