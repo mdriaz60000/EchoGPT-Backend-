@@ -1,0 +1,26 @@
+model ApiUsageLog {
+  id        String   @id @default(uuid())
+
+  userId    String
+  provider  String
+  model     String?
+  endpoint  String
+
+  success   Boolean  @default(true)
+  statusCode Int?
+
+  requestTokens  Int?
+  responseTokens Int?
+  totalTokens    Int?
+
+  errorMessage String?
+
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId],references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([provider])
+  @@index([success])
+  @@index([createdAt])
+}

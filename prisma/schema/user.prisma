@@ -16,4 +16,8 @@ model User {
    subscription Subscription?
 
    conversations Conversation[]
+
+   usageLogs ApiUsageLog[]
+   
+   searches WebSearch[]
 }
