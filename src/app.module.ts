@@ -6,6 +6,7 @@ import { ProvidersModule } from "./modules/providers/providers.module";
 import { ChatModule } from "./modules/chat/chat.module";
 import { UsageLogsModule } from "./modules/usageLogs/usageLogs.module";
 import { WebSearchModule } from "./modules/webSearch/webSearch.module";
+import { AdminModule } from "./modules/admin/admin.module";
 
 
 @Module({
@@ -16,7 +17,8 @@ import { WebSearchModule } from "./modules/webSearch/webSearch.module";
     ProvidersModule,
     ChatModule,
     UsageLogsModule,
-    WebSearchModule
+    WebSearchModule,
+    AdminModule
   ],
 })
 export class AppModule {}
